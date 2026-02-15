@@ -70,86 +70,9 @@ Once you create a superuser, access the admin panel at:
 - Add companies and jobs from the admin interface
 - Or use the web interface at `/job/create/` (must be marked as employer)
 
-## Deployment
 
-### Deploy to Render.com (Recommended - Free Tier Available)
-
-1. **Push to GitHub**
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
-2. **Create account on [Render.com](https://render.com)**
-
-3. **Connect GitHub repository**
-   - Click "New" → "Web Service"
-   - Select "Deploy existing code from a repository"
-   - Connect your GitHub account
-   - Select `job_portal` repository
-
-4. **Configure build settings**
-   - **Build Command**: `pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --no-input`
-   - **Start Command**: `gunicorn job_portal.wsgi:application`
-
-5. **Set Environment Variables** (in Render dashboard)
-   ```
-   DEBUG=False
-   SECRET_KEY=your-secret-key-here
-   ALLOWED_HOSTS=your-app.onrender.com
-   DATABASE_URL=postgres://your-database-url
-   ```
-
-6. **Deploy!**
-   - Click "Create Web Service"
-   - Wait for deployment (5-10 minutes)
-   - Your app will be live!
-
-### Deploy to Heroku (Traditional Option)
-
-1. **Install Heroku CLI**
-```bash
-# Windows: Download from https://devcenter.heroku.com/articles/heroku-cli
-# Or: choco install heroku-cli
-```
-
-2. **Login to Heroku**
-```bash
-heroku login
-```
-
-3. **Create Heroku app**
-```bash
-heroku create your-job-portal-app
-```
-
-4. **Add PostgreSQL addon**
-```bash
-heroku addons:create heroku-postgresql:hobby-dev
-```
-
-5. **Deploy**
-```bash
-git push heroku main
-```
-
-## Environment Variables
-
-For production, set these in your hosting platform's dashboard:
-
-```
-DEBUG=False
-SECRET_KEY=generate-a-strong-secret-key
-ALLOWED_HOSTS=yourdomain.com,www.yourdomain.com
-DATABASE_URL=your-database-connection-string
-EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=your-email@gmail.com
-EMAIL_HOST_PASSWORD=your-app-password
-```
+   
+  
 
 ## Project Structure
 
@@ -212,3 +135,4 @@ Your Name - [LinkedIn](https://linkedin.com/in/yourprofile)
 **Live Demo**: [Your Deployed URL Here]
 
 **GitHub**: https://github.com/YOUR_USERNAME/job_portal
+
