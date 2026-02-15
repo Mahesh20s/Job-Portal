@@ -128,11 +128,12 @@ For issues or questions, please open an issue on GitHub.
 
 ## Author
 
-Your Name - [LinkedIn](https://linkedin.com/in/yourprofile)
+Your Name - [LinkedIn](www.linkedin.com/in/smahesh9923)
 
 ---
 
 **Live Demo**: [Your Deployed URL Here]
 
-**GitHub**: https://github.com/YOUR_USERNAME/job_portal
+**GitHub**: https://github.com/Mahesh20s/job_portal
+
 
